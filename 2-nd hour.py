@@ -2,7 +2,10 @@ list1 = ["0","1","2", "3", "4",
          "5", "6","20","8", "9",
          "10", "11","12", "13"]
 
-print(sorted(list1, key=int))
+def asd(a):
+    return int(a)/10
+
+print(sorted(list1, key=asd))
 
 # (sort1) list1.sort()
 
