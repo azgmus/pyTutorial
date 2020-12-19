@@ -1,3 +1,4 @@
-import utils
+import utils as utils
 
-print(utils.stats_range([1, 2, 3, 4]))
+
+utils.da()

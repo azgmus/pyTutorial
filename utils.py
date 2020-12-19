@@ -1,0 +1,2 @@
+def da():
+    print('privet')
