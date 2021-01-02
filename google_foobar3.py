@@ -35,7 +35,7 @@ def solution(n, b):
             cur_id = '0' + cur_id
 
 
-    return 1
+
 
 
 
