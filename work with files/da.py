@@ -2,8 +2,10 @@
 # file.write('hello')
 # file.close()
 
-file = open('text.txt', 'r')
-#file.write('hello')
+file = open('oeis.org/A111133/b111133.txt', 'r')
+for line in file:
+
+    print(line)
 file.close()
 
 class da:

@@ -10,10 +10,12 @@ output_staircases = []
 
 
 def find_possibilities(staircase):
-    s = 0
-    if staircase not in output_staircases:
-        output_staircases.append(staircase)
 
+    if staircase not in output_staircases:
+        output_staircases.append(staircase[:])
+        print(len(output_staircases))
+    else:
+        return
     for i in range(-1, -len(staircase) - 1, -1):
         possible_staircase = []
 
@@ -26,12 +28,10 @@ def find_possibilities(staircase):
             else:
                 possible_staircase[j] += 1
             if is_correct(possible_staircase):
-                if possible_staircase not in output_staircases:
-                    output_staircases.append(possible_staircase[:])
-                    #if len(output_staircases) % 100 == 0:
-                        #print(len(output_staircases))
-                    #print(len(output_staircases))
+                if possible_staircase[:] not in output_staircases:
+
                     find_possibilities(possible_staircase)
+
 
 
 def solution(n):
@@ -56,18 +56,13 @@ def do_the_thing(n):
 
 pdif = 0
 previous = 0
-for i in range(3, 40):
-    output_staircases = []
-    solutioni = solution(i)
 
-    output_staircases = []
+#print(solution(200), end=', ')
+i = 0
+while True:
+    print(i)
+    i+=1
 
-    solutioninext = solution(i + 1)
-
-    dif = solutioninext - solutioni
-    thinginext = do_the_thing(i+1)
-    print(thinginext[0]-thinginext[1],len(do_the_thing(i + 1)), dif - pdif)
-    pdif = dif
 
 
 
